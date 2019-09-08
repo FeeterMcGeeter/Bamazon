@@ -54,6 +54,7 @@ function purchaseProduct(product, quantityRequested) {
 
             console.log("Your total is: $" + totalAmount);
 
+            // ===== UPDATING THE STOCK QUANTITY INSIDE THE DATABASE =====
             connection.query("UPDATE products SET stock_quantity = stock_quantity - " + quantityRequested + " WHERE id = " + product);
 
             // ===== ASKS THE USER IF THEY WISH TO CONTINUE SHOPPING =====
